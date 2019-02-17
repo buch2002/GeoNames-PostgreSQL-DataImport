@@ -1,9 +1,4 @@
-https://github.com/AGPDev/GeoNames-PostgreSQL-DataImport
-
-
-
-
-Генерация CSR
+Импорт данных с GeoNames в БД PostgreSQL
 ===================
 
 - - - - 
