@@ -1,17 +1,44 @@
-# GeoNames-PostgreSQL-DataImport
+https://github.com/AGPDev/GeoNames-PostgreSQL-DataImport
 
-### Shell Script for importing geonames.org data dumps into a PostgreSQL database.
 
-This project is based on <a href="https://github.com/codigofuerte/GeoNames-MySQL-DataImport" target="_blank">GeoNames MySQL DataImport</a>  by <a href="https://github.com/codigofuerte" target="_blank">Codigo Fuerte</a> just converted to work with PostgreSQL.
 
-Usage: geonames_importer.sh -a "action"
 
-Where "action" can be: 
-  
-- **download-data** Downloads the last packages of data available in GeoNames. An additional parameter with a download directory should be used.
-- **create-db** Creates the mysql database structure with no data.
-- **create-tables** Creates the tables in the current database. Useful if we want to import them in an exsiting db.
-- **import-dumps** Imports geonames data into db. A database is previously needed for this to work.
-- **drop-db** Removes the db completely.
-- **truncate-db** Removes geonames data from db.    
+Генерация CSR
+===================
+
+- - - - 
+
+Создание и поддержание актуальной копии списка стран, городов, областей в БД. Одной из крупнейших и наиболее широко используемых баз геоданных в части названий и координат различных мест. Исходные данные от GeoNames доступны по условиям лицензии Creative Commons.
+
+# GeoNames-PostgreSQL-DataImport #
+
+### Shell Script для импорта данных с geonames.org в базу данных PostgreSQL. ###
+
+Этот проект, является форком проекта <a href="https://github.com/AGPDev/GeoNames-PostgreSQL-DataImport" target="_blank">GeoNames PostgreSQL DataImport</a> пользователя <a href="https://github.com/AGPDev" target="_blank">Anderson Guilherme Porto</a> который адаптировал версию под PostgreSQL.
+
+Для файлов geonames_importer.sh и geonames_importer_ru.sh установить бит исполнения коммандой:
+```sh
+$ chmod +х geonames_importer*.sh
+```
+
+Все выводимые сообщения файла geonames_importer_ru.sh для убобства переведены на русский язык
+
+Перед запуском отредактируйте пункты под свои нужды:
+```sh
+dbhost="localhost"
+dbport=5432
+dbname="geonames"
+dbusername="postgres"
+```
+
+Использование: geonames_importer.sh -a "action"
+
+Где "action" может быть:
+
+- **download-data** Загружает последние пакеты данных, доступные на GeoNames. Следует использовать дополнительный параметр с каталогом загрузки.
+- **create-db** Создает структуру базы данных pgsql без данных.
+- **create-tables** Создает таблицы в текущей базе данных. Полезно и удобно, если мы хотим импортировать записи в существующую базу данных.
+- **import-dumps** Импортирует данные GeoNames в БД. Необходима работающая база данных для работы.
+- **drop-db** Удаляет БД полностью.
+- **truncate-db** Удаляет данные GeoNames из БД.
 
