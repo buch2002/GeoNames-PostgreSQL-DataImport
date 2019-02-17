@@ -37,3 +37,7 @@ dbusername="postgres"
 - **drop-db** Удаляет БД полностью.
 - **truncate-db** Удаляет данные GeoNames из БД.
 
+Например, для скачивания свежей версии данных GeoNames, используйте такую комманду:
+```sh
+$ geonames_importer.sh -a download-data
+```
