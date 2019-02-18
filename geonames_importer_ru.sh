@@ -39,9 +39,9 @@ postal_codes="allCountries.zip"
 
 logo() {
     echo "================================================================================================"
-    echo "                                                                                                "
-    echo "                           G E O N A M E S    D A T A    I M P O R T E R                        "
-    echo "                                                                                                "
+    echo "|                                                                                              |"
+    echo "|                          G E O N A M E S    D A T A    I M P O R T E R                       |"
+    echo "|                                                                                              |"
     echo "=========================================== v 2.0 =============================================="
 }
 
